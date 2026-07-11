@@ -20,14 +20,14 @@
        Design-Tokens  (Anlehnung an ton.org – helle Variante)
        ========================================================== */
     :root {
-      --blue:        #0098EA; /* Primärakzent (TON-/Telegram-Blau)   */
-      --blue-deep:   #0084CE; /* Hover & Blau-Text auf Weiß          */
-      --blue-soft:   rgba(0, 152, 234, .10); /* Icon-Hintergründe, Badges           */
+      --blue:        #0098EA;
+      --blue-deep:   #0084CE;
+      --blue-soft:   rgba(0, 152, 234, .10);
       --tg-gradient: linear-gradient(135deg, #2AABEE 0%, #0088CC 100%);
-      --ink:         #04060B; /* Überschriften / Fließtext dunkel    */
-      --muted:       #5A6B76; /* Sekundärtext                        */
+      --ink:         #04060B;
+      --muted:       #5A6B76;
       --bg:          #FFFFFF;
-      --bg-soft:     #F7F9FB;                    /* Kacheln & alternierende Sektionen   */
+      --bg-soft:     #F7F9FB;
       --border:      #E6EDF2;
       --radius-lg:   24px;
       --radius-md:   16px;
@@ -48,7 +48,7 @@
     html {
       scroll-behavior: smooth;
       -webkit-text-size-adjust: 100%;
-      overflow-x: hidden; /* Verhindert ungewolltes horizontales Scrollen auf Body-Ebene */
+      overflow-x: hidden;
     }
 
     body {
@@ -202,7 +202,6 @@
       padding: 7.5rem 0 7rem;
       text-align: center;
     }
-    /* weiche Glow-Flächen wie der „Hero glow background" auf ton.org */
     .hero::before,
     .hero::after {
       content: "";
@@ -257,10 +256,16 @@
     .hero h1 {
       margin: 1.5rem auto 0;
       max-width: 1000px;
-      font-size: clamp(2.75rem, 7.2vw, 4.75rem);
+      font-size: clamp(2.2rem, 7.2vw, 4.75rem);
       font-weight: 800;
       letter-spacing: -.035em;
       line-height: 1.04;
+      
+      /* Korrektur für extrem lange Wörter auf Mobilgeräten */
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
     }
     .text-gradient {
       background: var(--tg-gradient);
@@ -586,16 +591,15 @@
     /* Fix für extrem schmale Bildschirme im Header */
     @media (max-width: 480px) {
       .site-header .container {
-        gap: 0.5rem; /* Weniger Freiraum zwischen Logo und Button */
-        width: min(var(--container), 100% - 24px); /* Schmalerer Außenrand für mehr Arbeitsfläche */
+        gap: 0.5rem;
+        width: min(var(--container), 100% - 24px);
       }
       .brand { gap: 0.5rem; }
-      .brand-name b { font-size: 0.875rem; } /* Text minimal kleiner */
+      .brand-name b { font-size: 0.875rem; }
       .brand-name span { font-size: 0.625rem; }
       .brand-mark { width: 34px; height: 34px; border-radius: 9px; }
       .brand-mark svg { width: 18px; height: 18px; }
 
-      /* Kompakterer Header-Button */
       .site-header .btn--sm {
         padding: 0.55rem 0.9rem;
         font-size: 0.875rem;
@@ -604,7 +608,6 @@
     }
 
     @media (max-width: 360px) {
-      /* Falls das Display ultra-klein ist, verstecken wir das Wort „starten“ im Header-Button */
       .site-header .btn--sm {
         padding: 0.55rem 0.75rem;
       }
@@ -863,7 +866,7 @@
         <div class="cta-card">
           <div class="cta-inner">
             <h2>Bereit für mehr Transparenz?</h2>
-            <p>Starte den Bot kostenlos in deiner Telegram-App und bleib bei neuen Lebensmittelmängeln in Hessen automatisch auf dem Laufenden.</p>
+            <p>Starte den Bot kostenlos in deiner Telegram-App und bleib bei neuen Lebensmittelmängel in Hessen automatisch auf dem Laufenden.</p>
             <div class="cta-actions">
               <a class="btn btn--white" href="https://t.me/VerbraucherfensterBot" target="_blank" rel="noopener noreferrer">
                 <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-telegram"/></svg>
