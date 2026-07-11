@@ -85,7 +85,7 @@
     .icon { flex: none; }
 
     /* ==========================================================
-       Buttons (Pill-Style wie ton.org)
+       Buttons
        ========================================================== */
     .btn {
       display: inline-flex;
@@ -140,7 +140,7 @@
     .btn--sm { padding: .7rem 1.3rem; font-size: .9375rem; }
 
     /* ==========================================================
-       Header (sticky, Blur wie ton.org)
+       Header
        ========================================================== */
     .site-header {
       position: sticky;
@@ -260,8 +260,6 @@
       font-weight: 800;
       letter-spacing: -.035em;
       line-height: 1.04;
-      
-      /* Korrektur für extrem lange Wörter auf Mobilgeräten */
       overflow-wrap: anywhere;
       word-break: break-word;
       hyphens: auto;
@@ -311,7 +309,7 @@
     .hero-meta .icon { color: var(--blue); }
 
     /* ==========================================================
-       Sektionen & Karten (Kachel-Grid wie das Ökosystem-Grid)
+       Sektionen & Karten
        ========================================================== */
     .section { padding: 7rem 0; }
     .section--alt {
@@ -345,7 +343,7 @@
 
     .feature-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
     }
     .telegram-grid {
@@ -413,7 +411,7 @@
     }
 
     /* ==========================================================
-       CTA-Banner (blaue Verlaufskachel)
+       CTA-Banner
        ========================================================== */
     .cta { padding: 0 0 7rem; }
 
@@ -580,10 +578,13 @@
     }
     @media (max-width: 820px) {
       .main-nav { display: none; }
-      .hero     { padding: 5.5rem 0; }
-      .section  { padding: 5.5rem 0; }
-      .cta      { padding: 0 0 5.5rem; }
-      .section-head { margin-bottom: 3rem; }
+      
+      /* Reduzierte Abstände für Mobilgeräte */
+      .hero     { padding: 3rem 0 4rem; } 
+      .section  { padding: 3rem 0; }
+      .cta      { padding: 0 0 4.5rem; }
+      .section-head { margin-bottom: 2rem; }
+      
       .footer-top   { grid-template-columns: 1fr 1fr; }
       .footer-brand { grid-column: 1 / -1; }
     }
@@ -639,10 +640,13 @@
 <body id="top">
 
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
-    <symbol id="i-shield" viewBox="0 0 24 24">
+    <symbol id="i-bot" viewBox="0 0 24 24">
       <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
-        <path d="m9 12 2 2 4-4"/>
+        <rect x="3" y="11" width="18" height="10" rx="2" />
+        <circle cx="12" cy="5" r="2" />
+        <path d="M12 7v4" />
+        <line x1="8" y1="16" x2="8.01" y2="16" />
+        <line x1="16" y1="16" x2="16.01" y2="16" />
       </g>
     </symbol>
     <symbol id="i-layers" viewBox="0 0 24 24">
@@ -668,6 +672,18 @@
       <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 3l1.9 5.7a2 2 0 0 0 1.4 1.4L21 12l-5.7 1.9a2 2 0 0 0-1.4 1.4L12 21l-1.9-5.7a2 2 0 0 0-1.4-1.4L3 12l5.7-1.9a2 2 0 0 0 1.4-1.4z"/>
         <path d="M19 3v3M20.5 4.5h-3"/>
+      </g>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </g>
+    </symbol>
+    <symbol id="i-map" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
       </g>
     </symbol>
     <symbol id="i-bell" viewBox="0 0 24 24">
@@ -710,7 +726,7 @@
     <div class="container">
       <a class="brand" href="#top" aria-label="Verbraucherfenster Hessen – zum Seitenanfang">
         <span class="brand-mark">
-          <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-shield"/></svg>
+          <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-bot"/></svg>
         </span>
         <span class="brand-name">
           <b>Verbraucherfenster</b>
@@ -720,6 +736,7 @@
 
       <nav class="main-nav" aria-label="Hauptnavigation">
         <a href="#funktionen">Funktionen</a>
+        <a href="#befehle">Befehle</a>
         <a href="#warum-telegram">Warum Telegram?</a>
         <a href="https://github.com/TelegramTrainer/Verbraucherfenster" target="_blank" rel="noopener noreferrer">
           GitHub
@@ -740,7 +757,7 @@
       <div class="container">
         <span class="hero-badge">
           <span class="dot" aria-hidden="true"></span>
-          Open-Source-Projekt&nbsp;·&nbsp;§&nbsp;40 Abs.&nbsp;1a LFGB
+          Open-Source-Projekt&nbsp;·&nbsp;Schnell &amp; Kostenlos
         </span>
 
         <h1>Verbraucherfenster <span class="text-gradient">Hessen</span></h1>
@@ -786,7 +803,7 @@
         <div class="section-head">
           <span class="eyebrow">Überblick</span>
           <h2>Die Funktionen</h2>
-          <p>Vier Bausteine für mehr Transparenz bei Hygiene- und Lebensmittelmängel in Hessen.</p>
+          <p>Sechs Bausteine für mehr Transparenz bei Hygiene- und Lebensmittelmängeln in Hessen.</p>
         </div>
 
         <div class="feature-grid">
@@ -795,7 +812,7 @@
               <svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-layers"/></svg>
             </div>
             <h3>Intelligente Zusammenführung</h3>
-            <p>Die offiziellen Einträge desselben Betriebs (Name, Straße, Ort) werden übersichtlich zusammengeführt.</p>
+            <p>Alle aktuell offiziellen Meldungen desselben Betriebs werden übersichtlich in einer digitalen Akte gebündelt.</p>
           </article>
 
           <article class="card">
@@ -803,7 +820,7 @@
               <svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-gauge"/></svg>
             </div>
             <h3>Verbraucher-Index</h3>
-            <p>Jeder Betrieb erhält eine verständliche Einschätzung (0–100) basierend auf Anzahl, Aktualität und Schweregrad.</p>
+            <p>Jeder Betrieb erhält eine verständliche Einschätzung (0–100) basierend auf Anzahl, Aktualität und KI-Schweregrad. Erkennt Verbesserungen und Häufungen.</p>
           </article>
 
           <article class="card">
@@ -811,21 +828,79 @@
               <svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-search"/></svg>
             </div>
             <h3>Tippfehlertolerante Suche</h3>
-            <p>Schnelles Durchsuchen von Betriebsname, Straße und Ort – ideal für unterwegs.</p>
+            <p>Findet Betriebe zuverlässig trotz Tippfehlern oder unterschiedlichen Schreibweisen in Name, Straße oder Ort – ideal für unterwegs.</p>
           </article>
 
           <article class="card">
             <div class="card-icon">
               <svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-sparkles"/></svg>
             </div>
-            <h3>KI-gestützte Analyse</h3>
-            <p>Automatische Kurzzusammenfassungen langer, behördlicher Berichte direkt auf den Punkt.</p>
+            <h3>KI-Zusammenfassungen</h3>
+            <p>Lange Berichte werden automatisch in kurze Stichpunkte zusammengefasst – die schwerwiegendsten Mängel stehen immer ganz oben.</p>
+          </article>
+          
+          <article class="card">
+            <div class="card-icon">
+              <svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-clock"/></svg>
+            </div>
+            <h3>Übersichtliche Akten</h3>
+            <p>Lass dir alle derzeit veröffentlichten Vorfälle eines bestimmten Betriebs bequem auf dem Handy anzeigen – ohne langes Suchen.</p>
+          </article>
+          
+          <article class="card">
+            <div class="card-icon">
+              <svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-map"/></svg>
+            </div>
+            <h3>Google Maps Integration</h3>
+            <p>Ein einfacher Klick auf den verlinkten Betriebsnamen im Bot öffnet direkt die gesuchte Adresse in deiner Karten-App.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section id="befehle" class="section section--alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Steuerung</span>
+          <h2>Die wichtigsten Befehle</h2>
+          <p>Der Bot lässt sich schnell und intuitiv über einfache Befehle steuern.</p>
+        </div>
+
+        <div class="telegram-grid">
+          <article class="card card--white">
+            <h3><code class="cmd">/suche &lt;Begriff&gt;</code></h3>
+            <p>Durchsuche den gesamten aktuellen Bestand gezielt nach einem Betriebsnamen, einer Straße oder einem Ort.</p>
+          </article>
+
+          <article class="card card--white">
+            <h3><code class="cmd">/neueste</code></h3>
+            <p>Zeigt dir auf einen Blick die zuletzt erfassten und veröffentlichten Mängel, sortiert nach Aktualität.</p>
+          </article>
+
+          <article class="card card--white">
+            <h3><code class="cmd">/historie &lt;Name&gt;</code></h3>
+            <p>Ruf die gebündelte Akte eines Betriebs auf und blättere bequem durch alle aktuell vorliegenden Meldungen.</p>
+          </article>
+          
+          <article class="card card--white">
+            <h3><code class="cmd">/top [Stadt]</code></h3>
+            <p>Zeigt die aktuelle Rangliste der Betriebe mit den meisten dokumentierten Einträgen (optional auf deine Stadt begrenzt).</p>
+          </article>
+
+          <article class="card card--white">
+            <h3><code class="cmd">/watch &lt;Stadt&gt;</code></h3>
+            <p>Abonniere deinen Wohnort oder Lieblingsbetriebe und erhalte automatisch eine Push-Nachricht bei neuen Treffern.</p>
+          </article>
+          
+          <article class="card card--white">
+            <h3><code class="cmd">/status</code></h3>
+            <p>Wirf einen Blick in die Systemstatistik und sieh sofort, wie viele Betriebe und Mängel aktuell in Hessen erfasst sind.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="warum-telegram" class="section section--alt">
+    <section id="warum-telegram" class="section">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Direkt aufs Smartphone</span>
@@ -834,15 +909,15 @@
         </div>
 
         <div class="telegram-grid">
-          <article class="card card--white">
+          <article class="card">
             <div class="card-icon">
               <svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-bell"/></svg>
             </div>
-            <h3>Automatisches Abonnement <code class="cmd">/watch</code></h3>
-            <p>Lass dich automatisch per Push informieren, sobald neue Mängel in deiner Stadt (z.&nbsp;B. Frankfurt, Kassel) gemeldet werden.</p>
+            <h3>Automatisches Abonnement</h3>
+            <p>Lass dich automatisch per Push informieren, sobald neue Mängel in deiner abonnierten Stadt gemeldet werden.</p>
           </article>
 
-          <article class="card card--white">
+          <article class="card">
             <div class="card-icon">
               <svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-smartphone"/></svg>
             </div>
@@ -850,12 +925,12 @@
             <p>Läuft direkt in deiner bestehenden Telegram-App – plattformübergreifend auf dem Handy, Tablet oder PC.</p>
           </article>
 
-          <article class="card card--white">
+          <article class="card">
             <div class="card-icon">
               <svg class="icon" width="24" height="24" aria-hidden="true"><use href="#i-zap"/></svg>
             </div>
-            <h3>Schnelle Kurzbefehle</h3>
-            <p>Intuitive Bedienung über einfache Steuerungsbefehle und interaktive Inline-Buttons.</p>
+            <h3>Kurzbefehle & Inline-Buttons</h3>
+            <p>Intuitive Bedienung über einfache Steuerungsbefehle (auch als `.s` statt `/suche`) und interaktive Inline-Buttons unter jeder Nachricht.</p>
           </article>
         </div>
       </div>
@@ -866,7 +941,7 @@
         <div class="cta-card">
           <div class="cta-inner">
             <h2>Bereit für mehr Transparenz?</h2>
-            <p>Starte den Bot kostenlos in deiner Telegram-App und bleib bei neuen Lebensmittelmängel in Hessen automatisch auf dem Laufenden.</p>
+            <p>Starte den Bot kostenlos in deiner Telegram-App und bleib bei neuen Lebensmittelmängeln in Hessen automatisch auf dem Laufenden.</p>
             <div class="cta-actions">
               <a class="btn btn--white" href="https://t.me/VerbraucherfensterBot" target="_blank" rel="noopener noreferrer">
                 <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-telegram"/></svg>
@@ -891,7 +966,7 @@
         <div class="footer-brand">
           <a class="brand" href="#top" aria-label="Verbraucherfenster Hessen – zum Seitenanfang">
             <span class="brand-mark">
-              <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-shield"/></svg>
+              <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-bot"/></svg>
             </span>
             <span class="brand-name">
               <b>Verbraucherfenster</b>
@@ -905,6 +980,7 @@
           <h4>Projekt</h4>
           <ul>
             <li><a href="#funktionen">Funktionen</a></li>
+            <li><a href="#befehle">Befehle</a></li>
             <li><a href="#warum-telegram">Warum Telegram?</a></li>
           </ul>
         </nav>
