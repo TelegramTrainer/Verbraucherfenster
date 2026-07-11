@@ -1,2 +1,34 @@
-# Verbraucherfenster
-Einblick in die nach § 40 Abs. 1a LFGB veröffentlichten Hygiene- und Lebensmittelmängel in Hessen. Bereitstellung über ein interaktives Such- und Benachrichtigungssystem.
+---
+title: Verbraucherfenster Hessen – Komfortable Suche & Benachrichtigung für Lebensmittelmängel
+description: Optimierte Übersicht und Suchfunktion für die in Hessen nach § 40 Abs. 1a LFGB veröffentlichten Hygiene- und Lebensmittelmängel.
+---
+
+# Verbraucherfenster Hessen – Komfortable Suche & Benachrichtigung für Lebensmittelmängel
+
+Dieses Projekt bietet eine tippfehlertolerante Suchfunktion, automatische Regionen-Benachrichtigungen und einen transparenten Verbraucher-Index für die in Hessen nach **§ 40 Abs. 1a LFGB** veröffentlichten Hygiene- und Lebensmittelmängel der offiziellen Plattform.
+
+👉 **Direkt zur mobilen Suche & Benachrichtigung auf Telegram:** [@verbraucherfensterbot](https://t.me/verbraucherfensterbot)
+
+---
+
+## Funktionsumfang & Mehrwert
+
+* **Intelligente Zusammenführung:** Die offiziellen Einträge desselben Betriebs (Name, Straße, Ort) werden übersichtlich zusammengeführt, sodass die behördliche Dokumentation auf einen Blick erfasst werden kann.
+* **Verbraucher-Index:** Jeder Betrieb erhält eine verständliche Einschätzung (0–100) basierend auf Anzahl, Aktualität und Schweregrad der dokumentierten Vorfälle. Der ausführliche Indexbericht schlüsselt alle Faktoren transparent auf.
+* **Tippfehlertolerante Suche:** Schnelles Durchsuchen von Betriebsname, Straße und Ort dank intelligenter Textnormalisierung – ideal für die schnelle Abfrage von unterwegs.
+* **KI-gestützte Analyse (optional):** Automatische, stichpunktartige Zusammenfassungen langer, behördlicher Berichte, die das Wesentliche und die schwersten Mängel sofort auf den Punkt bringen.
+
+---
+
+## Die Vorteile über Telegram
+
+Die Bereitstellung über Telegram bietet im Vergleich zur klassischen Webansicht entscheidende Vorteile für Verbraucher:
+
+* **Automatisches Abonnement (`/watch`):** Du musst nicht ständig selbst nachsehen. Lass dich einfach automatisch per Push-Nachricht auf deinem Smartphone informieren, sobald es neue Einträge für bestimmte Begriffe oder ganze Städte/Regionen (z. B. Frankfurt, Kassel) gibt.
+* **Keine App-Installation nötig:** Da der Service direkt als Telegram-Bot läuft, ist keine separate App-Installation erforderlich. Die Nutzung ist plattformübergreifend auf dem Handy, Tablet oder PC möglich.
+* **Schnelle Kurzbefehle:** Über einfache Steuerungsbefehle und interaktive Inline-Buttons lässt sich das gesamte System extrem schnell und intuitiv bedienen.
+
+---
+
+## Rechtlicher Hinweis
+Dieses Projekt ist ein inoffizielles Angebot und keine amtliche Quelle. Maßgeblich und rechtsverbindlich sind ausschließlich die aktuellen, offiziellen Veröffentlichungen der zuständigen hessischen Behörden auf dem originalen Verbraucherfenster Hessen.
