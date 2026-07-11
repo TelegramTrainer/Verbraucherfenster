@@ -26,7 +26,7 @@ Die Bereitstellung über Telegram bietet im Vergleich zur klassischen Webansicht
 
 * **Automatisches Abonnement (`/watch`):** Du musst nicht ständig selbst nachsehen. Lass dich einfach automatisch per Push-Nachricht auf deinem Smartphone informieren, sobald es neue Einträge für bestimmte Begriffe oder ganze Städte/Regionen (z. B. Frankfurt, Kassel) gibt.
 * **Keine App-Installation nötig:** Da der Service direkt als Telegram-Bot läuft, ist keine separate App-Installation erforderlich. Die Nutzung ist plattformübergreifend auf dem Handy, Tablet oder PC möglich.
-* **Schnelle Kurzbefehle:** Über einfache Steuerungsbefehle und interaktive Inline-Buttons lässt sich das gesamte System extrem schnell und intuitiv bedienen.
+* **Schnelle Kurzbefehle:** Über einfache Steuerungsbefehle und interaktive Inline-Buttons lässt sich das gesamte System extrem schnell und intuitiv bedienen. 
 
 ---
 
