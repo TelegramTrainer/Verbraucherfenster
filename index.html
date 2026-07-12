@@ -290,10 +290,6 @@
       font-weight: 800;
       letter-spacing: -.035em;
       line-height: 1.04;
-      overflow-wrap: anywhere;
-      word-break: break-word;
-      hyphens: auto;
-      -webkit-hyphens: auto;
     }
     .text-gradient {
       background: var(--tg-gradient);
@@ -424,8 +420,7 @@
       color: var(--muted);
       font-size: .97rem;
       line-height: 1.65;
-      hyphens: auto;
-      -webkit-hyphens: auto;
+      text-wrap: pretty;
     }
 
     code.cmd {
@@ -662,10 +657,10 @@
       }
       .hero h1 .text-gradient { display: block; }
 
-      /* Fließtext sauber umbrechen lassen */
+      /* Fließtext sauber umbrechen lassen – ohne Silbentrennung */
       .hero-text {
-        hyphens: auto;
-        -webkit-hyphens: auto;
+        hyphens: none;
+        -webkit-hyphens: none;
         text-wrap: pretty;
       }
 
@@ -853,7 +848,7 @@
       <div class="container">
         <span class="hero-badge">
   <span class="dot" aria-hidden="true"></span>
-  Open Source<span class="badge-extra"> · Transparent</span>
+  System online<span class="badge-extra"> · Transparent</span>
   </span>
 
         <h1>Verbraucherfenster <span class="text-gradient">Hessen</span></h1>
