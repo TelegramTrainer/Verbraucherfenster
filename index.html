@@ -595,6 +595,24 @@
       .hero-badge { padding: .45rem .95rem; font-size: .8rem; }
       .hero-badge .badge-extra { display: none; }
 
+      /* H1 ohne Trennstrich: "Verbraucherfenster" füllt Zeile 1,
+         "Hessen" steht in gleicher Größe darunter */
+      .hero h1 {
+        hyphens: none;
+        -webkit-hyphens: none;
+        word-break: normal;
+        overflow-wrap: normal;
+        font-size: clamp(1.5rem, calc((100vw - 48px) / 9.6), 4rem);
+      }
+      .hero h1 .text-gradient { display: block; }
+
+      /* Fließtext sauber umbrechen lassen */
+      .hero-text {
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        text-wrap: pretty;
+      }
+
       .footer-top   { grid-template-columns: 1fr 1fr; }
       .footer-brand { grid-column: 1 / -1; }
     }
@@ -630,8 +648,12 @@
     @media (max-width: 640px) {
       .feature-grid { grid-template-columns: 1fr; }
 
-      /* "Warum Telegram?": Icons & Inhalte auf dem Smartphone zentrieren */
+      /* Icons & Inhalte auf dem Smartphone zentrieren:
+         "Funktionen", "Befehle" und "Warum Telegram?" */
+      #funktionen .card,
+      #befehle .card,
       #warum-telegram .card { text-align: center; }
+      #funktionen .card-icon,
       #warum-telegram .card-icon { margin-inline: auto; }
     }
     @media (max-width: 520px) {
@@ -780,7 +802,7 @@
 
         <p class="hero-text">
           Dieses Projekt bietet eine tippfehlertolerante Suchfunktion, automatische
-          Regionen&#8209;Benachrichtigungen und einen transparenten Verbraucher-Index für die in
+          Regionen-Benachrichtigungen und einen transparenten Verbraucher-Index für die in
           Hessen nach §&nbsp;40 Abs.&nbsp;1a LFGB veröffentlichten Hygiene- und Lebensmittelmängel.
         </p>
 
