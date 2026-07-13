@@ -5,7 +5,7 @@
 Ein inoffizieller, intelligenter Telegram-Bot zur komfortablen Suche, automatischen Benachrichtigung und Analyse von Hygiene- und Lebensmittelmängeln in Hessen gemäß **§ 40 Abs. 1a LFGB**.
 
 🔗 **Offizielle Projekt-Webseite:** [telegramtrainer.github.io/Verbraucherfenster](https://telegramtrainer.github.io/Verbraucherfenster/)  
-✈️ **Direkt zum Bot:** [@VerbraucherfensterBot](https://t.me/VerbraucherfensterBot)
+✈️ **Direkt zum Bot:** [@VerbraucherfensterBot](https://telegram.me/VerbraucherfensterBot)
 
 ---
 
