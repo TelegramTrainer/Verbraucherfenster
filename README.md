@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Aegis Banner" width="100%">
+</p>
+
 # Verbraucherfenster Hessen – Telegram Bot 🔍
 
 [![Platform](https://img.shields.io/badge/Platform-Telegram-0088cc.svg)](https://t.me/VerbraucherfensterBot)
